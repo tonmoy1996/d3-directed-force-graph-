@@ -8551,7 +8551,12 @@
     "kapsule" "^1.13"
     "polished" "4"
 
-"three@*", "three@>=0.118 <1", "three@>=0.118.3":
+"three-spritetext@^1.6.5":
+  "integrity" "sha512-ttA1ce3tJz6OFojLGY3VjtqF9johetq50TztYcPFWqdEUrwPmej5XXcHahVyQGd88FHRDzJmW2rW3zSifUsdYA=="
+  "resolved" "https://registry.npmjs.org/three-spritetext/-/three-spritetext-1.6.5.tgz"
+  "version" "1.6.5"
+
+"three@*", "three@>=0.118 <1", "three@>=0.118.3", "three@>=0.86.0":
   "integrity" "sha512-xM/WwUd53ClkbHFrftW29aIzMVvyhj4rSZmIVgn6hZ/kYB7aMjDD8FFy4VJamygXSrldJuOgEJuaI+E+8mt/KA=="
   "resolved" "https://registry.npmjs.org/three/-/three-0.138.0.tgz"
   "version" "0.138.0"

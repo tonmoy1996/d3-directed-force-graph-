@@ -12,7 +12,7 @@ const applyGraphForces = (graphRef, linkDistance) => {
     graphRef.current
         .d3Force("link")
         .iterations(2)
-        .distance(linkDistance);
+        .distance(50);
 
     //$FlowIssue
     graphRef.current
@@ -24,7 +24,6 @@ const applyGraphForces = (graphRef, linkDistance) => {
     graphRef.current.d3Force("collision", forceCollide(FORCE_COLLIDE_RADIUS)
         .strength(0.1)
         .iterations(2));
-    // graphRef.current.d3Force('collision', d3.forceCollide(node => Math.sqrt(100 / (node.level + 1))));
 
     graphRef.current.d3ReheatSimulation();
 };
@@ -91,6 +90,7 @@ const LinkAnalysis = (data) => {
         nodeLabel="id"
         nodeVal={20}
         linkOpacity={1}
+        linkWidth={5}
         linkDirectionalArrowLength={10}
         linkDirectionalArrowRelPos={1.5}
         nodeDesc={"id"}
@@ -107,7 +107,7 @@ const LinkAnalysis = (data) => {
         linkDirectionalParticles={4}
         linkDirectionalParticleWidth={link => highlightLinks.has(link) ? 4 : 0}
         nodeCanvasObjectMode={node => highlightNodes.has(node) ? 'before' : undefined}
-        // nodeCanvasObject={paintRing}
+        nodeCanvasObject={paintRing}
         onNodeHover={handleNodeHover}
         onLinkHover={handleLinkHover}
         linkWidth={link => highlightLinks.has(link) ? 5 : 1}
